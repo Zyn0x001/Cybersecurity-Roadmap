@@ -2,7 +2,7 @@
 
 **whoami** - it will print who am i (user name)
 
-## File System (**ls , cd , pwd , mkdir, rm, rmdir, cp, mv , tree)
+## File System (**ls , cd , pwd , mkdir, rm, rmdir, cp, mv , tree**)
 
 #### **ls**  - Listing (list all folder and file on current Dir/Folder)
 
