@@ -22,8 +22,10 @@
     
         # 4. Hang up
         s.close()
-        
- # Simulated password to crack
+
+## Brute Force Logic
+
+    # Simulated password to crack
     real_password = "secret123"
 
     # Our "Dictionary" of guesses
@@ -36,3 +38,4 @@
             break
             else:
             print(f"Failed attempt: {guess}")
+
