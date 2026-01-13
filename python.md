@@ -1,12 +1,12 @@
 ## Socket Programing 
 
-- import socket
+    import socket
 
-target_ip = "127.0.0.1" # Localhost
-ports = [21, 22, 80, 443]
+    target_ip = "127.0.0.1" # Localhost
+    ports = [21, 22, 80, 443]
 
-for port in ports:
-    # 1.  Create a socket object (The Phone)
+    for port in ports:
+    # 1. Create a socket object (The Phone)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     # 2. Set a timeout so we don't wait forever
@@ -21,4 +21,5 @@ for port in ports:
         print(f"Port {port} is CLOSED")
     
     # 4. Hang up
+
     s.close()
