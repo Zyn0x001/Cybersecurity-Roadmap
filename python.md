@@ -6,20 +6,33 @@
     ports = [21, 22, 80, 443]
 
     for port in ports:
-    # 1. Create a socket object (The Phone)
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # 1. Create a socket object (The Phone)
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    # 2. Set a timeout so we don't wait forever
-    s.settimeout(1)
+        # 2. Set a timeout so we don't wait forever
+        s.settimeout(1)
 
-    # 3. Try to connect (The Dial)
-    result = s.connect_ex((target_ip, port))
+        # 3. Try to connect (The Dial)
+        result = s.connect_ex((target_ip, port))
 
-    if result == 0:
-        print(f"Port {port} is OPEN")
-    else:
-        print(f"Port {port} is CLOSED")
+        if result == 0:
+           print(f"Port {port} is OPEN")
+        else:
+            print(f"Port {port} is CLOSED")
     
-    # 4. Hang up
+        # 4. Hang up
+        s.close()
+        
+ # Simulated password to crack
+    real_password = "secret123"
 
-    s.close()
+    # Our "Dictionary" of guesses
+    wordlist = ["password", "admin", "123456", "secret123", "football"]
+
+    # Loop through the list
+    for guess in wordlist:
+        if guess == real_password:
+            print(f"Success! Password found: {guess}")
+            break
+            else:
+            print(f"Failed attempt: {guess}")
