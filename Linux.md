@@ -1,9 +1,13 @@
-**echo**
+### echo
 
+    echo
+ 
  - will output any text that we will Provide
 
-**whoami**
+### whoami
 
+    whoami
+ 
  - it will print who am i (user name)
 
 # Files
@@ -12,7 +16,7 @@
 
 ### ls  - Listing (list all folder and file on current Dir/Folder)
 
-ls [OPTION]... [FILE]...
+     ls [OPTION]... [FILE]...
 
 - OPTION: modifies the behavior of the command.
 - FILE: specifies which files or directories to list. If none is provided, it defaults to the current directory (.).
@@ -32,29 +36,29 @@ ls [OPTION]... [FILE]...
 
 **Example**
 
-- ls -alh
+     - ls -alh
 
 ### cd - Change Directory (Folder)
 
-cd [path] or cd [..]
+    cd [path] or cd [..]
 
 **Example** - cd /examplepath [It used for Entering into a Directories]
 
-- cd ..  [it will performe one step backward]
-- cd ../.. [for two step backward]
-- cd / [for root directory]
-
+    - cd .. [it will performe one step backward]
+    - cd ../.. [for two step backward]
+    - cd / [for root directory]
+ 
 ### pwd - Print Working Directorys
 
 **Example**
 
- - pwd
+    pwd
 
 ### tree - → Shows directory structure as a tree
 
 **Example**
 
- - tree 
+    tree 
 
 
 
@@ -64,16 +68,16 @@ cd [path] or cd [..]
 
 **Example** 
 
-- cat 
-- cat example.txt/pdf
+    cat 
+    cat example.txt/pdf
 
 #### **touch** - Create an empty file if it doesn’t exist or creating multiple file
 
 **Example** 
 
-- touch example.txt 
-- touch example.txt test.txt file.txt
-- touch [option]  example.txt
+    touch example.txt 
+    touch example.txt test.txt file.txt
+    touch [option]  example.txt
 
 #### **mkdir** - Make Directory/ Creating Folder
 
@@ -81,52 +85,53 @@ cd [path] or cd [..]
 
 **Example**
 
-- mkdir newdir or folder name
-- mkdir -p (create parents folders if needed)
-- mkdir -p example/example/example
-- mkdir -p lab/{room1,room2}/{notes,tools}
+    mkdir newdir or folder name
+    mkdir -p (create parents folders if needed)
+    mkdir -p example/example/example
+    mkdir -p lab/{room1,room2}/{notes,tools}
+
 it will create folder  like this - 
-lab/
-├── room1/
-│   ├── notes/
-│   └── tools/
-└── room2/
+    
+    lab/
+    ├── room1/
+    │   ├── notes/
+    │   └── tools/
+    └── room2/
     ├── notes/
     └── tools/
-- 
 
 #### **cp** - copy a file or directory
 
 **Example**
 
- - cp exmaple.txt Desktop/etc
+     cp exmaple.txt Desktop/etc
 
 #### **mv** - move 
 
 **Example** 
 
-- mv example.txt home/Downloads
+    mv example.txt home/Downloads
 
 #### **rm** - Remove [Removing file]
 
 **Example** 
 
-- rm example.txt
-- rm -rf [Directory Name]
+    rm example.txt
+    rm -rf [Directory Name]
 
 #### **del** - delete
 
 **Example** 
 
-- del [dir name]
+    del [dir name]
 
 #### **rmdir** - Remove Directories
 
-- rmdir [foldername]
+    rmdir [foldername]
 
 **Example** 
 
-- rmdir exmapledir [it will delete exmapledir named dir]
+    rmdir exmapledir [it will delete exmapledir named dir]
 
 ## Permissions (chmod, chown)
 
@@ -151,11 +156,11 @@ Permission 	Character	  Value	   Meaning
 Permissions can be changed using symbolic notation (using the letters u, g, o, a, +, -, =) or numeric (octal) notation (using the values 4, 2, 1). 
 
 **Example**
-
-- chmod u+x filename
-- chmod +755 filename
-- chmod +777 filename
-- chmod -057 filename
+    
+    chmod u+x filename
+    chmod +755 filename
+    chmod +777 filename
+    chmod -057 filename
 
 #### chown (chnage owner)
 
@@ -163,15 +168,15 @@ Permissions can be changed using symbolic notation (using the letters u, g, o, a
 
 **Example** 
 
-- chown newowner filename.txt
-- chown newowner:newgroup filename.txt
+    chown newowner filename.txt
+    chown newowner:newgroup filename.txt
 
 
 ## Search & Filters [find, grep, wc]
 
 #### **find** - Finding for files or directory
 
-- find [PATH] [OPTIONS] [EXPRESSION]
+     find [PATH] [OPTIONS] [EXPRESSION]
 
 - PATH: Where to start the search (e.g., /, .).
 - OPTIONS / EXPRESSION: What to search for and what to do with the results.
@@ -195,18 +200,18 @@ Option	Description
 
 **Example** 
 
-- find /path/to/search -name "filename.txt"
-- find -name example.txt
-- find -rname example.txt
-- find -name *.txt
-- find Desktop/etc/ -type f -name "*.txt"
-- find Desktop/ -type f -iname "*.txt"
+    find /path/to/search -name "filename.txt"
+    find -name example.txt
+    find -rname example.txt
+    find -name *.txt
+    find Desktop/etc/ -type f -name "*.txt"
+    find Desktop/ -type f -iname "*.txt"
 
 **wc** 
 
 - wc is used for Counting Line or text in a file.
 
-wc [OPTION]... [FILE]...
+      wc [OPTION]... [FILE]...
 
 **Common Options**
 
@@ -218,36 +223,37 @@ wc [OPTION]... [FILE]...
 
 **Example**
 
-- wc file.txt [The output would look like: 4 18 76 filename.txt, indicating 4 lines, 18 words, and 76 bytes.]
-- wc -l example.txt [Counting Line]
+    wc file.txt [The output would look like: 4 18 76 filename.txt, indicating 4 lines, 18 words, and 76 bytes.]
+    wc -l example.txt [Counting Line]
 
 
 **grep**
 
 **Example** 
 
-- grep "example/word/nUmber" example.txt
-- grep "exmaple word" example.txt
-- 
+    grep "example/word/nUmber" example.txt
+    grep "exmaple word" example.txt
+ 
 
 
 **Shell Operators**
 
 **Symbol / Operator**	**Description**
--      &	             This operator allows you to run commands in the background of your terminal.
--      &&	             This operator allows you to combine multiple commands together in one line of your terminal.
--      >             	 This operator is a redirector - meaning that we can take the output from a command or override a file (such as using cat to output a file) and direct it elsewhere.
--      >>            	 This operator does the same function of the > operator but appends the output rather than replacing (meaning nothing is overwritten).
+      
+     &	             This operator allows you to run commands in the background of your terminal.
+     &&	             This operator allows you to combine multiple commands together in one line of your terminal.
+     >             	 This operator is a redirector - meaning that we can take the output from a command or override a file (such as using cat to output a file) and direct it elsewhere.
+     >>            	 This operator does the same function of the > operator but appends the output rather than replacing (meaning nothing is overwritten).
 
 
 **Example** 
 
-- cp example.txt /home/kali/Desktop/ &
-- command1 && command2
-- cat hey > example.txt    
-- cat hello >> example.txt
-- echo "user: admin pass: 12345" > example.txt
-- echo "user: guest pass: guest" >> example.txt
+    cp example.txt /home/kali/Desktop/ &
+    command1 && command2
+    cat hey > example.txt    
+    cat hello >> example.txt
+    echo "user: admin pass: 12345" > example.txt
+    echo "user: guest pass: guest" >> example.txt
 
 
 
